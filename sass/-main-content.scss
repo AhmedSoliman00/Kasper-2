@@ -1,0 +1,189 @@
+.landing {
+    min-height: 100vh;
+    background-image: linear-gradient(to right bottom, #000000a6, #000000b7), url(../images/landing.jpg);
+    background-color: $second-color;
+    position: relative;
+
+    &__text {
+        @include center-absolute;
+
+        left: 0;
+        max-width: 50%;
+        padding: 50px;
+        background: $transparent-color;
+        color: white;
+        display: flex;
+        flex-direction: column;
+        justify-content: end;
+        align-items: flex-end;
+
+    }
+
+    &__content {
+        width: 70%;
+
+
+        h2 {
+            margin-bottom: 2rem;
+            line-height: 1.6;
+            font-weight: normal;
+            font-size: 1.6rem;
+        }
+
+        p {
+            line-height: 1.7;
+        }
+    }
+
+
+
+    .change-background {
+        @include center-absolute;
+        color: #ddd;
+        cursor: pointer;
+        transition: .3s;
+
+        &:hover {
+            color: rgb(200, 129, 47);
+        }
+    }
+
+    .fa-angle-right {
+        right: 30px;
+    }
+
+    .fa-angle-left {
+        left: 30px;
+    }
+
+    .bullets {
+        position: absolute;
+        right: 50%;
+        bottom: 30px;
+        transform: translateX(50%);
+        display: flex;
+        width: 100px;
+        justify-content: space-between;
+
+        li {
+            width: 20px;
+            height: 20px;
+            border: 1px solid rgb(202, 202, 202);
+            color: $main-color;
+            border-radius: 50%;
+
+        }
+
+        .active {
+            background-color: $main-color;
+        }
+    }
+}
+
+@media (max-width: 767px) {
+    .landing {
+        &__text {
+            max-width: 100%;
+            height: 66%;
+            padding: 30px;
+
+            i {
+                font-size: .5rem;
+            }
+
+
+        }
+
+        &__content {
+            width: 95%;
+
+            p {
+                font-size: 18px;
+                line-height: 1.6;
+            }
+        }
+
+        .fa-angle-right {
+            right: 8px;
+        }
+
+        .fa-angle-left {
+            left: 8px;
+        }
+    }
+}
+
+.about {
+    padding-top: 60px;
+    overflow: hidden;
+    text-align: center;
+
+    &__image {
+        position: relative;
+        max-width: 100%;
+        bottom: -132px;
+        right: 41px;
+        margin-top: -100px;
+    }
+}
+
+@media (max-width:767px) {
+    .about__image {
+        right: 12px;
+        position: relative;
+        top: 100px;
+    }
+}
+
+.statues {
+    padding: 70px;
+    width: 96%;
+    margin: 0 auto;
+    background: linear-gradient(to bottom, rgba(#000, .7), rgba(#272222, 0.8)), url(../images/stats.png);
+}
+
+.stats {
+    display: grid;
+
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    color: white;
+
+    &__box {
+
+        text-align: center;
+        background-color: $transparent-color;
+        width: 100%;
+        padding: 70px;
+        display: flex;
+        flex-direction: column;
+        justify-items: center;
+        align-items: center;
+
+        i {
+            font-size: 40px;
+        }
+
+        .number {
+            font-weight: bold;
+            font-size: 3rem;
+            margin: 1.5rem 0;
+        }
+
+        p {
+            min-width: 200px;
+            font-size: 1.2rem;
+        }
+
+
+    }
+}
+
+@media(max-width:767px) {
+    .stats {
+        position: relative;
+        top: 0;
+        bottom: 0;
+        justify-content: center;
+
+    }
+}

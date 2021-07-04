@@ -1,0 +1,49 @@
+.main-heading {
+    padding: $section-padding 0;
+    text-align: center;
+
+    h2 {
+        font-weight: normal;
+        font-size: 2.1rem;
+        margin-bottom: 1.5rem;
+        position: relative;
+        text-transform: uppercase;
+        background: linear-gradient(to top right, rgba(rgb(96, 241, 185), .9), rgba(#10aeca, 0.9));
+-webkit-background-clip: text;
+-webkit-text-fill-color: transparent;
+
+        &::before {
+            content: "";
+            position: absolute;
+            background-color: black;
+            bottom: -10px;
+            right: 50%;
+            transform: translateX(50%);
+            height: 2px;
+            width: 100px;
+        }
+
+        &::after {
+            content: "";
+            position: absolute;
+            background-color: $main-color;
+            left: 50%;
+            width: 15px;
+            height: 15px;
+            bottom: -18px;
+            transform: translateX(-50%);
+            border-radius: 50%;
+            border: 1px solid rgb(255, 255, 255);
+        }
+    }
+
+    p {
+        width: 550px;
+        max-width: 100%;
+        text-align: center;
+        margin: 0 auto 50px;
+        color: $text-secondary;
+        line-height: 1.8;
+    }
+}
+

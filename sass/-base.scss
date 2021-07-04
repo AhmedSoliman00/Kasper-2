@@ -1,0 +1,48 @@
+// Start Var
+$main-color:#1281b8;
+$second-color:#1f2021;
+$transparent-color:#1a77a599;
+$text-secondary:#aeaeae;
+$section-padding:50px;
+// End Var
+
+// Start global rules
+.container {
+    padding: 0 15px;
+    margin: 0 auto;
+}
+
+* {
+    box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Open Sans', sans-serif;
+}
+
+a {
+    text-decoration: none;
+}
+
+li {
+    list-style: none;
+}
+
+// End global rules
+
+// start mixins
+@mixin center-absolute {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.title {
+    background: linear-gradient(to top right, rgba(rgb(96, 241, 185), .9), rgba(#10aeca, 0.9));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}

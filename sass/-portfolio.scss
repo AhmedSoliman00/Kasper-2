@@ -1,0 +1,94 @@
+.portfolio {
+    padding: $section-padding 0;
+    margin-bottom: 20px;
+
+    //shuffle
+    &__shuffle {
+        display: flex;
+        justify-content: center;
+        margin: 10px;
+
+        li {
+            padding: 20px;
+            transition: .3s;
+            cursor: pointer;
+
+            &:hover,
+            :active {
+                background-color: $main-color;
+                color: white;
+            }
+
+        }
+
+        .active {
+            background-color: $main-color;
+            color: white;
+        }
+    }
+
+    //container img
+    .img-container {
+        margin-top: 60px;
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+        
+
+        img {
+            max-width: 100%;
+            transition: .4s;
+        }
+
+        // box
+        &__box {
+            position: relative;
+            overflow: hidden;
+
+            &:hover img {
+                transform: scale(1.3) rotate(3deg);
+            }
+
+            &:hover .caption {
+                bottom: 0;
+            }
+
+            // caption in box
+            .caption {
+                position: absolute;
+                left: 0;
+                padding: 20px;
+                background-color: rgba(136, 68, 96, 0.534);
+                width: 100%;
+                transition: .3s;
+                bottom: -100%;
+
+                h2 {
+                    margin-bottom: 10px;
+                    color: white;
+                }
+
+                p {
+                    color: rgba(34, 215, 221, 0.795);
+                }
+            }
+        }
+    }
+
+    .more {
+        background-color: $main-color;
+        padding: 10px 25px;
+        position: absolute;
+        margin: 10px auto;
+        right: 50%;
+        color: white;
+        transform: translateX(50%);
+        transition: .3s;
+        box-shadow: 0 10px 25px rgba($color: #44dfd7ad, $alpha: .5);
+
+        &:hover {
+            background-color: rgba(85, 17, 68, 0.842);
+            letter-spacing: 1px;
+            
+        }
+    }
+}

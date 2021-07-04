@@ -1,0 +1,179 @@
+.skills {
+    padding: $section-padding 0;
+
+    &__container {
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
+    }
+
+    &__container>div {
+        flex-basis: 45%;
+        text-align: center;
+
+        p {
+            color: #777;
+            margin: 20px 0 40px 0;
+            line-height: 2;
+        }
+
+        h3 {
+            font-weight: normal;
+            font-size: 1.5rem;
+            text-transform: uppercase;
+        }
+    }
+
+    &__testmonilas {
+        position: relative;
+
+        .content {
+            display: flex;
+            align-items: flex-start;
+
+            .text {
+                text-align: start;
+                line-height: 2.2;
+
+                p {
+                    text-align: end;
+                    border-bottom: 1px solid #777;
+                    margin: 10px;
+                    margin-bottom: 40px;
+                }
+            }
+
+            img {
+                height: 100px;
+                border-radius: 50%;
+                margin-right: 60px;
+            }
+
+
+
+
+        }
+    }
+
+    .bullets {
+        position: absolute;
+        right: 50%;
+        bottom: 25px;
+        transform: translateX(50%);
+        display: flex;
+        width: 100px;
+        justify-content: space-between;
+        margin-top: 20px;
+
+        .active {
+            background-color: $main-color;
+        }
+
+        li {
+            width: 20px;
+            height: 20px;
+            border: 1px solid #cacaca;
+            color: #1281b8;
+            border-radius: 50%;
+
+        }
+    }
+
+    &__our-skills {
+
+        .prog-holder {
+            margin-bottom: 35px;
+            text-align: start;
+
+            h4 {
+                font-weight: normal;
+                text-transform: uppercase;
+                margin-bottom: 15px;
+                letter-spacing: 1px;
+            }
+
+            .prog {
+                background-color: #dedadc;
+                height: 35px;
+
+                span {
+                    position: relative;
+                    display: block;
+                    background-color: $main-color;
+                    height: 100%;
+
+                    &::before {
+                        content: attr(data-progress);
+                        position: absolute;
+                        content: attr(data-progress);
+                        position: absolute;
+                        color: floralwhite;
+                        background: #607d8b;
+                        padding: 3px;
+                        border-radius: 5px;
+                        bottom: 45px;
+                        right: -16px;
+                    }
+
+                    &::after {
+                        content: "";
+                        position: absolute;
+                        border-style: solid;
+                        border-width: 7px;
+                        border-color: #607d8b transparent transparent;
+                        right: -6px;
+                        bottom: 31px;
+                    }
+                }
+            }
+        }
+    }
+}
+
+//testimonils responsive
+@media (max-width:767px) {
+    .skills__container {
+        flex-direction: column;
+
+        .content {
+            flex-direction: column;
+
+            img {
+                margin: 0 0 20px 0;
+                align-self: center;
+            }
+
+            .text {
+                text-align: center;
+
+                p {
+                    margin-bottom: 60px;
+                }
+            }
+        }
+    }
+}
+
+//qoute
+.qoute {
+    padding: 100px 0;
+    background-image: linear-gradient(rgba(#0000, 0.7), rgba(rgba(0, 0, 0, 0.575), 0.5)), url(../images/austin-wade-glK_8Ph6GlE-unsplash.jpg);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    color: white;
+    text-align: center;
+
+    q {
+        font-family: 'Font Awesome 5 Free';
+        content: "\f10e";
+        font-size: 2rem;
+        margin-bottom: 40px;
+        display: block;
+        color: rgb(210, 235, 229);
+    }
+
+    p {
+        color: #777;
+    }
+}
